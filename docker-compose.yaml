@@ -9,5 +9,5 @@ services:
       - 8080:8080
   logstash:
     build: ./logstash
-    ports:
-      - 5140:5140
+#    ports:
+#     - 5140:5140
