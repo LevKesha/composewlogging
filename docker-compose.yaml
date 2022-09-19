@@ -9,5 +9,5 @@ services:
       - "8080:8080"
   logstash:
     build: ./logstash
-    expose:
+    ports:
      - "5140"
