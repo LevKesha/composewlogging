@@ -2,9 +2,9 @@ FROM nginx:stable-alpine
 
 WORKDIR /nginx
 
-RUN chown nginx:nginx /nginx
+#RUN chown nginx:nginx /nginx
 
-USER nginx
+USER root
 
 COPY ./data /nginx/data
 COPY ./conf /nginx/conf
