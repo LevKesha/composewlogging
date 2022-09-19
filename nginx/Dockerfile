@@ -6,7 +6,7 @@ RUN chown nginx:nginx /nginx
 
 USER nginx
 
-COPY ./data /nginx/data
-COPY ./nginx.conf /nginx/conf
+COPY ./data /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
 CMD ["nginx", "-c", "/nginx/conf/nginx.conf"]
