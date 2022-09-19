@@ -6,6 +6,8 @@ services:
     depends_on:
       - logstash
     ports:
-      - 8080:8080
+      - 80:80
   logstash:
     build: ./logstash
+    ports:
+      - 8080:8080
