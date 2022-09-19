@@ -10,6 +10,6 @@ RUN "$PLUGIN_BIN" install logstash-output-coralogix
 
 COPY ./conf /etc/logstash
 
-EXPOSE 5140
+#EXPOSE 5140
 
 CMD ["-f", "/etc/logstash/logstash.conf"]
