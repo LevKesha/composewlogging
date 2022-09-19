@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    build: ./nginx
+    depends_on:
+      - logstash
+    ports:
+      - 8080:8080
+  logstash:
+    build: ./logstash
