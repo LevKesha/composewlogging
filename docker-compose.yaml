@@ -10,4 +10,4 @@ services:
   logstash:
     build: ./logstash
     ports:
-     - "5140"
+     - "5140:5140"
