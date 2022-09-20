@@ -3,7 +3,7 @@ FROM elastic/filebeat:6.6.2
 #RUN sudo filebeat modules enable nginx
 COPY nginx.d /etc/filebeat/modules.d/
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
-COPY ca.crt /etc/ssl/certs/Coralogix.crt
+COPY ca.crt /etc/ssl/certs/ca.crt
 USER root
 #RUN mkdir -p  /etc/ssl/certs/
 #RUN curl -o  /etc/ssl/certs/ca.crt \
