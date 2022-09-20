@@ -1,0 +1,21 @@
+#============================== Filebeat Inputs ===============================
+
+filebeat.inputs:
+- type: log
+#  paths: /usr/share/filebeat/logs
+   paths: ./log/nginx
+
+fields_under_root: true
+fields:
+  PRIVATE_KEY: "18fc6f06-66d1-6b66-902b-eee6f2e0d209"
+  COMPANY_ID: 17784
+  APP_NAME: "Nginx"
+  SUB_SYSTEM: "SUB_nginx"
+
+#----------------------------- Logstash output --------------------------------
+
+output.logstash:
+  enabled: true
+  hosts: ["logstashserver.Cluster coralogix.com:5044"]
+  tls.certificate_authorities: ["/etc/pki/ca-trust/coralogix/ca.crt"]
+  ssl.certificate_authorities: ["/etc/pki/ca-trust/coralogix/ca.crt"]

@@ -4,10 +4,12 @@ services:
   nginx:
     build: ./nginx
     depends_on:
-      - logstash
+      - filebeat
     ports:
       - "8080:8080"
-  logstash:
-    build: ./logstash
+    volumes:
+      - ./log/nginx:/var/log/nginx
+  filebeat:
+    build: ./filebeat
     ports:
-     - "5140:5140"
+     - "5044:5044"
