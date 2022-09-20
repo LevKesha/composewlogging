@@ -18,6 +18,6 @@ fields:
 
 output.logstash:
   enabled: true
-  hosts: ["logstashserver.Cluster logstashserver.coralogix.com:5044"]
+  hosts: ["logstashserver.coralogix.com:5044"]
   tls.certificate_authorities: ["/etc/pki/ca-trust/coralogix/ca.crt"]
   ssl.certificate_authorities: ["/etc/pki/ca-trust/coralogix/ca.crt"]
