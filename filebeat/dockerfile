@@ -4,6 +4,7 @@ FROM elastic/filebeat:6.6.2
 COPY nginx.d /etc/filebeat/modules.d/
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
 COPY ca.crt /etc/ssl/certs/ca.crt
+COPY ca.crt /etc/pki/ca-trust/coralogix/ca.crt
 USER root
 #RUN mkdir -p  /etc/ssl/certs/
 #RUN curl -o  /etc/ssl/certs/ca.crt \
