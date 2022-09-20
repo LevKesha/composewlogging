@@ -11,7 +11,7 @@ services:
       - ./log/nginx:/var/log/nginx
   filebeat:
     build: ./filebeat
-    ports:
-     - "5044:5044"
+#    ports:
+#     - "5044:5044"
     volumes:
       - ./log/nginx:/var/log/nginx
