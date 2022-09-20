@@ -10,4 +10,5 @@ USER root
 #RUN curl -o  /etc/ssl/certs/ca.crt \
 #     https://coralogix-public.s3-eu-west-1.amazonaws.com/certificate/ca.crt \
 RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
+USER filebeat
 EXPOSE 5044
