@@ -12,4 +12,4 @@ services:
   filebeat:
     build: ./filebeat
     ports:
-     - "5015:5015"
+     - "5044:5044"
