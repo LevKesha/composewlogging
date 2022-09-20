@@ -3,7 +3,7 @@
 filebeat.inputs:
 - type: log
   paths:
-  - "/usr/share/filebeat/logs"
+  - "/var/log/nginx"
 #  paths: /usr/share/filebeat/logs
 
 
