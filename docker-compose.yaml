@@ -8,10 +8,10 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./log/nginx:/var/log/nginx
+      - ./log:/var/log/nginx
   filebeat:
     build: ./filebeat
 #    ports:
 #     - "5044:5044"
     volumes:
-      - ./log/nginx:/var/log/nginx
+      - ./log:/var/log/nginx
