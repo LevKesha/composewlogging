@@ -1,6 +1,6 @@
 FROM elastic/filebeat:6.6.2
-RUN sudo filebeat modules list
-RUN sudo filebeat modules enable nginx
+#RUN sudo filebeat modules list
+#RUN sudo filebeat modules enable nginx
 COPY nginx.d /etc/filebeat/modules.d/
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
 RUN mkdir -p  /etc/ssl/certs/
