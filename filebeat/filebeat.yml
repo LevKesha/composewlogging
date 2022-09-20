@@ -2,8 +2,9 @@
 
 filebeat.inputs:
 - type: log
+- paths: ./log/nginx
 #  paths: /usr/share/filebeat/logs
-   paths: ./log/nginx
+
 
 fields_under_root: true
 fields:
